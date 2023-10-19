@@ -28,10 +28,6 @@ header {
   border: 5px solid;
   font-weight: 600;
   font-size: 36px;
-  background: linear-gradient(135deg, #d4c2ad, #66796b);
-  color: #efdfcc;
-  text-shadow: -1px -1px 0 #66796b, 1px -1px 0 #66796b, -1px 1px 0 #66796b,
-    1px 1px 0 #66796b;
 }
 
 h1.title {

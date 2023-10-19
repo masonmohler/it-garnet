@@ -1,0 +1,73 @@
+/*  ---------------Box Sizing-----------------  */
+
+html {
+    box-sizing: border-box;
+}
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+}
+
+/*  --------------- Utility Classes -----------------  */
+
+.container {
+    width: 80vw;
+    max-width: 960px;
+    margin: 40px auto;
+}
+
+.img-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/*  --------------- Global Styles -----------------  */
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+}
+
+h1.title {
+  text-align: center;
+}
+
+h2.section-heading {
+  padding: 10px;
+  border: 5px solid #000;
+  text-align: center;
+  background: linear-gradient(255deg, #c0c0c0, #fff);
+}
+
+input, label {
+  display: block;
+}
+
+table {
+  width: 100%;
+  padding: 5px;
+  border: 5px solid;
+  border-collapse: collapse;
+}
+
+table td {
+  text-align: right;
+  border: 1px solid;
+  padding: 5px;
+}
+
+table th {
+  padding: 10px;
+  border: 1px solid;
+}
+
+table tr {
+  transition: .3s;
+}
+
+table tr:hover {
+  background-color: #d3d3d3;
+}

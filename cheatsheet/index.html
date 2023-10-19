@@ -1,0 +1,172 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Elevator pitch here">
+  <meta name="author" content="Mason Mohler">
+  <link rel="stylesheet" href="assets/style.css">
+  <title>HTML Reference</title>
+  </head>
+  <body class="container">
+    <h1 class="title">HTML5 Reference Document</h1>
+    <section id="forms">
+      <h2 class="section-heading">Forms</h2>
+      <form action="processing-script.php" method="get">
+        <fieldset>
+          <legend>Sample Form Fields</legend>
+          <label for="full-name">Full Name: </label>
+          <input type="text" id="full-name" name="full-name"/>
+          <label for="address">Address: </label>
+          <textarea name="address" id="address" cols="30" rows="5"></textarea>
+          <label for="cmf">Favorite Car Manufacturer: </label>
+          <select name="cmf" id="cmf">
+            <option value="null" selected>---</option>
+            <option value="ford">Ford</option>
+            <option value="dodge">Dodge</option>
+            <option value="honda">Honda</option>
+            <option value="toyota">Toyota</option>
+            <option value="bentley">Bentley</option>
+            <option value="bmw">BMW</option>
+          </select>
+          <input type="submit" value="Save and Submit"/>
+        </fieldset>
+      </form>
+    </section>
+    <section id="headings">
+      <h2 class="section-heading">Headings</h2>
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <h4>Heading 4</h4>
+      <h5>Heading 5</h5>
+      <h6>Heading 6</h6>
+    </section>
+    <section id="text-based-semantics">
+      <h2 class="section-heading">Text Based Semantics</h2>
+      <p>
+        Lorem, ipsum dolor sit amet <em>emphasized text</em> consectetur adipisicing elit. Enim eos <strong>strong text</strong> maiores magni ratione animi nobis. Voluptate sunt esse <del>deleted text</del> est consectetur voluptatum aspernatur <sup>superscript</sup> accusantium ipsa! Alias, <sub>subscript</sub> quos vel.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nulla, pariatur laboriosam explicabo ea ullam temporibus culpa ex below is a horizonatal rule <hr />voluptates distinctio error quos id suscipit, voluptatibus quibusdam sapiente odit enim. Itaque?
+      </p>
+    <address>
+      Mason Mohler<br />
+      777 Easy St.<br />
+      Little Rock, AR, 72204
+    </address>
+    </section>
+    <section id="table">
+      <h2 class="section-heading">Table</h2>
+      <table>
+        <tr>
+          <th>Item</th>
+          <th>Quantity</th>
+          <th>Cost</th>
+        </tr>
+        <tr>
+          <td>Soda</td>
+          <td>12</td>
+          <td>$0.50</td>
+        </tr>
+        <tr>
+          <td>Soda</td>
+          <td>12</td>
+          <td>$0.50</td>
+        </tr>
+        <tr>
+          <td>Soda</td>
+          <td>12</td>
+          <td>$0.50</td>
+        </tr>
+      </table>
+    </section>
+    <section id="lists">
+      <h2 class="section-heading">Lists</h2>
+      <h3>Unordered List</h3>
+      <ul>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item</li>
+      </ul>
+      <h3>Ordered List</h3>
+      <ol>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item</li>
+      </ol>
+      <h3>Definition List</h3>
+      <dl>
+        <dt>Definition Term</dt>
+        <dd>Definition Description</dd>
+        <dd>Definition Description</dd>
+        <dd>Definition Description</dd>
+        <dt>Definition Term</dt>
+        <dd>Definition Description</dd>
+        <dd>Definition Description</dd>
+        <dd>Definition Description</dd>
+      </dl>
+      <h3>Nested List</h3>
+      <ol>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item
+          <ul>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item
+          <ol start="5">
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+          </ol>      
+        </li>
+        <li>List Item</li>
+        <li>List Item</li>
+          </ul>
+        </li>
+        <li>List Item</li>
+        <li>List Item</li>
+      </ol>
+    </section>
+    <section id="hyperlinks">
+      <h2 class="section-heading">Hyperlinks</h2>
+      <ul>
+        <li><a href="https://www.thomaswallace.net" target="_blank">Absolute Link</a></li>
+        <li><a href="folder/folder/file.html" title="Relative Link Example">Relative Link</a></li>
+        <li><a href="#headings">Anchor Link</a></li>
+        <li><a href="mailto:email@address.com">Email Link</a></li>
+      </ul>
+    </section>
+    <section id="quotes">
+      <h2 class="section-heading">Quotes</h2>
+      <h3>Blockquote</h3>
+        <blockquote>
+        Hapiness is not by chance, but by choice. <cite>Jim Rohn<cite/>
+        </blockquote>
+      <h3>Inline Quote</h3>
+        <p><q>Act as if what you do makes a difference.  It does.</q> said William James.</p>
+    </section>
+    <section id="images">
+      <h2 class="section-heading">Images</h2>
+      <img class="img-center" src="https://thomaswallace.net/wp-content/uploads/2018/02/ualr.png" alt="UA Little Rock Logo">
+    </section>
+    <section id="structural-elements">
+      <h2 class="section-heading">Structural Elements</h2>
+      <code>&lt;div&gt;</code>
+      <code>&lt;span&gt;</code>
+      <code>&lt;main&gt;</code>
+      <code>&lt;section&gt;</code>
+      <code>&lt;nav&gt;</code>
+      <code>&lt;article&gt;</code>
+      <code>&lt;aside&gt;</code>
+      <code>&lt;header&gt;</code>
+      <code>&lt;footer&gt;</code>
+      <code>&lt;figure&gt;</code>
+      <code>&lt;figcaption&gt;</code>
+    </section>
+  </body>
