@@ -1,0 +1,122 @@
+/* Color Theme Swatches in Hex 
+#0A0B26 (really dark blue)
+#101240 (dark blue)
+#161A59 (blue)
+#0ABFBF (aqua)
+#BF396A (pink)
+*/
+
+/* --------------- Box Sizing ----------------- */
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* ---------------Utility Classes----------------- */
+
+.container {
+  margin: auto;
+  padding: 40px;
+}
+
+/* --------------- Global Styles ----------------- */
+
+body {
+  font-family: "Jost", sans-serif;
+  background-color: #101240;
+  color: #fff;
+}
+
+main {
+  background-color: #161a59;
+  width: 80vw;
+  margin: 40px auto;
+  border: 5px solid #0abfbf;
+}
+
+header.primary {
+  background-image: url(https://assets.codepen.io/7248/bg_1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-bottom: 5px solid #0abfbf;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+header.primary .hgroup {
+  width: 70%;
+}
+
+.hgroup h1,
+.hgroup h2 {
+  margin: 0;
+}
+
+header.primary .hgroup h1 a {
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 1px 1px 5px #0abfbf;
+  font-size: 2.4rem;
+}
+
+header.primary .hgroup h2 {
+  color: #fff;
+  text-shadow: 1px 1px 5px #0abfbf;
+  font-size: 1.4rem;
+}
+
+header.primary nav {
+  width: 30%;
+  margin: 0;
+}
+
+header.primary nav ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+header.primary nav ul li {
+  margin-bottom: 10px;
+}
+
+header.primary nav a {
+  text-decoration: none;
+  color: #fff;
+  text-shadow: 1px 1px 5px #bf396a;
+  display: block;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 5px;
+  border: 2px solid #bf396a;
+  border-right: 10px solid #bf396a;
+  border-radius: 20px 0;
+  text-align: center;
+  transition: 0.5s;
+  background-color: #101240;
+}
+
+header.primary nav a:hover {
+  box-shadow: 400px 0px 0px 0px inset #fff;
+  color: #bf396a;
+  text-shadow: none;
+}
+
+header.primary nav a:active {
+  background-color: #fff;
+  color: #bf396a;
+  text-shadow: none;
+}
+
+#content h2,
+#content h3 {
+  color: #fff;
+  border-left: 7.5px solid #bf396a;
+  padding: 7.5px;
+}
