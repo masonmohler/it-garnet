@@ -1,0 +1,21 @@
+/*  --------------- Box Sizing -----------------  */
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*  --------------- Global Styles -----------------  */
+
+.formlabel {
+  display: inline-block;
+  flex-direction: column;
+  text-align: right;
+  padding: 5px;
+  font-weight: bold;
+  width: 50%;
+}
