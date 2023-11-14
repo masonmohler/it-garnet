@@ -7,6 +7,9 @@
     <meta name="description" content="Validation Project" />
     <title>Validation</title>
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.min.js"></script>
   </head>
   <body>
     <header>
@@ -25,7 +28,10 @@
           name="FirstName"
           size="30"
           maxlength="30"
+          data-rule-required="true"
+          data-msg-required="First Name is required"
         />
+        <label for="FirstName" class="error"></label>
         <label class="formlabel" for="MiddleInitial">Middle Initial:</label>
         <input
           type="text"
@@ -41,12 +47,31 @@
           name="LastName"
           size="30"
           maxlength="30"
+          data-rule-required="true"
+          data-msg-required="Last Name is required"
         />
+        <label for="LastName" class="error"></label>
         <label class="formlabel" for="Email">Email:</label>
-        <input type="text" id="Email" name="Email" size="30" maxlength="30" />
+        <input
+          type="text"
+          id="Email"
+          name="Email"
+          size="30"
+          maxlength="30"
+          data-rule-required="true"
+          data-msg-required="Email is required"
+          data-rule-email="true"
+          data-msg-email="Invalid Email"
+        />
+        <label for="Email" class="error"></label>
         <label class="formlabel">Sex:</label>
         <label for="Male"
-          ><input type="radio" name="Male" id="M" value="M" />Male</label
+          ><input
+            type="radio"
+            name="Male"
+            id="M"
+            value="M"
+          />Male</label
         >
         <label for="Female"
           ><input type="radio" name="Female" id="F" value="F" />Female</label
@@ -169,6 +194,9 @@
           name="SubmitButton"
         />
       </form>
+      <script>
+        $("#NewPatientForm").validate({});
+      </script>
     </main>
   </body>
 </html>

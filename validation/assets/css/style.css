@@ -19,3 +19,8 @@ html {
   font-weight: bold;
   width: 50%;
 }
+
+.error {
+  color: red;
+  padding-left: 5px;
+}
