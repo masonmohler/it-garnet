@@ -17,11 +17,16 @@ html {
   box-sizing: inherit;
 }
 
-/* ---------------Utility Classes----------------- */
+/* --------------- Utility Classes ----------------- */
 
 .container {
   margin: auto;
   padding: 40px;
+}
+
+/* --------------- Responsive Image ----------------- */
+img {
+  max-width: 100%;
 }
 
 /* --------------- Global Styles ----------------- */
@@ -119,4 +124,53 @@ header.primary nav a:active {
   color: #fff;
   border-left: 7.5px solid #bf396a;
   padding: 7.5px;
+}
+
+#blog {
+  border-top: 5px solid #0abfbf;
+  border-bottom: 5px solid #0abfbf;
+  padding: 20px 0;
+}
+
+#blog > h2 {
+  text-shadow: 1px 1px 5px #0abfbf;
+  text-align: center;
+  font-size: 2rem;
+}
+
+article.post {
+  background-color: #101240;
+  margin: 10px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas:
+    "figure header"
+    "figure post-content"
+    "figure footer";
+  grid-gap: 10px;
+  border: 5px solid #0abfbf;
+}
+
+article.post figure {
+  grid-area: figure;
+  margin: 0;
+}
+
+article.post header {
+  grid-area: header;
+}
+
+article.post .post-content {
+  grid-area: post-content;
+}
+
+article.post .post-meta {
+  grid-area: footer;
+}
+
+aside .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
 }
