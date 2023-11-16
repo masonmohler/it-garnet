@@ -64,13 +64,15 @@
           data-msg-email="Invalid Email"
         />
         <label for="Email" class="error"></label>
-        <label class="formlabel">Sex:</label>
+        <label class="formlabel" for="Sex">Sex:</label>
         <label for="Male"
           ><input
             type="radio"
             name="Male"
             id="M"
             value="M"
+            data-rule-required="true"
+            data-msg-required="Sex is Required"
           />Male</label
         >
         <label for="Female"
@@ -79,6 +81,7 @@
         <label for="N/A"
           ><input type="radio" name="N/A" id="N" value="N" />N/A</label
         >
+        <label for="Sex" class="error"></label>
         <label class="formlabel" for="Birthday">Birthday:</label>
         <input
           type="text"
@@ -86,6 +89,10 @@
           name="Birthday"
           size="8"
           maxlength="8"
+          data-rule-date="true"
+          data-msg-date="Date must be MM/DD/YYYY format"
+          data-rule-required="true"
+          data-msg-required="Birthday is Required"
         />
         <label class="formlabel" for="Height">Height (inches):</label>
         <input type="text" id="Height" name="Height" size="3" maxlength="3" />

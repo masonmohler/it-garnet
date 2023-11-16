@@ -13,7 +13,6 @@ html {
 
 .formlabel {
   display: inline-block;
-  flex-direction: column;
   text-align: right;
   padding: 5px;
   font-weight: bold;
@@ -22,5 +21,5 @@ html {
 
 .error {
   color: red;
-  padding-left: 5px;
+  margin-left: 5px;
 }
