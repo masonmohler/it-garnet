@@ -99,9 +99,8 @@ header.primary nav a {
   text-transform: uppercase;
   font-weight: bold;
   padding: 5px;
-  border: 2px solid #bf396a;
-  border-right: 10px solid #bf396a;
-  border-radius: 20px 0;
+  border: 5px solid #bf396a;
+  border-radius: 10px;
   text-align: center;
   transition: 0.5s;
   background-color: #101240;
@@ -161,6 +160,11 @@ article.post header {
   grid-area: header;
 }
 
+article.post a {
+  color: #fff;
+  text-shadow: 1px 1px 5px #bf396a;
+}
+
 article.post .post-content {
   grid-area: post-content;
 }
@@ -173,4 +177,11 @@ aside .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 20px;
+}
+
+#colophon h6 {
+  text-align: center;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  border-top: 5px solid #0abfbf;
 }
