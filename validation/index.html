@@ -64,24 +64,29 @@
           data-msg-email="Invalid Email"
         />
         <label for="Email" class="error"></label>
-        <label class="formlabel" for="Sex">Sex:</label>
+        <label class="formlabel">Sex:</label>
         <label for="Male"
           ><input
             type="radio"
-            name="Male"
-            id="M"
+            name="SexChoice"
+            id="Male"
             value="M"
             data-rule-required="true"
             data-msg-required="Sex is Required"
           />Male</label
         >
         <label for="Female"
-          ><input type="radio" name="Female" id="F" value="F" />Female</label
+          ><input
+            type="radio"
+            name="SexChoice"
+            id="Female"
+            value="F"
+          />Female</label
         >
-        <label for="N/A"
-          ><input type="radio" name="N/A" id="N" value="N" />N/A</label
+        <label for="NA"
+          ><input type="radio" name="SexChoice" id="NA" value="N" />N/A</label
         >
-        <label for="Sex" class="error"></label>
+        <label for="SexChoice" class="error"></label><br />
         <label class="formlabel" for="Birthday">Birthday:</label>
         <input
           type="text"
@@ -89,15 +94,45 @@
           name="Birthday"
           size="8"
           maxlength="8"
-          data-rule-date="true"
-          data-msg-date="Date must be MM/DD/YYYY format"
           data-rule-required="true"
           data-msg-required="Birthday is Required"
+          data-rule-date="true"
+          data-msg-date="Date must be MM/DD/YY format"
         />
         <label class="formlabel" for="Height">Height (inches):</label>
-        <input type="text" id="Height" name="Height" size="3" maxlength="3" />
+        <input
+          type="text"
+          id="Height"
+          name="Height"
+          size="3"
+          maxlength="3"
+          data-rule-required="true"
+          data-msg-required="Height is required"
+          data-rule-number="true"
+          data-msg-number="Height must be a number"
+          data-rule-min="12"
+          data-msg-min="Height must be greater than or equal to 12 inches"
+          data-rule-max="120"
+          data-msg-max="Height must be less than or equal to 120 inches"
+        />
+        <label for="Height" class="error"></label><br />
         <label class="formlabel" for="Weight">Weight (pounds):</label>
-        <input type="text" id="Weight" name="Weight" size="3" maxlength="3" />
+        <input
+          type="text"
+          id="Weight"
+          name="Weight"
+          size="3"
+          maxlength="3"
+          data-rule-required="true"
+          data-msg-required="Weight is required"
+          data-rule-number="true"
+          data-msg-number="Weight must be a number"
+          data-rule-min="10"
+          data-msg-min="Weight must be greater than or equal to 10 pounds"
+          data-rule-max="500"
+          data-msg-max="Weight must be less than or equal to 500 pounds"
+        />
+        <label for="Weight" class="error"></label><br />
         <hr />
         <label class="formlabel" for="PhoneNumber">Phone Number:</label>
         <input
@@ -106,9 +141,18 @@
           name="PhoneNumber"
           size="14"
           maxlength="14"
+          data-rule-required="true"
+          data-msg-required="Phone Number is required"
+          data-rule-phoneUS="true"
+          data-msg-phoneUS="Invalid Phone Number"
         />
         <label class="formlabel">Marital Status:</label>
-        <select name="MaritalStatus" id="MaritalStatus">
+        <select
+          name="MaritalStatus"
+          id="MaritalStatus"
+          data-rule-required="true"
+          data-msg-required="Marital Status is Required"
+        >
           <option value="">Select...</option>
           <option value="S">Single</option>
           <option value="M">Married</option>
@@ -123,11 +167,27 @@
           name="Address"
           size="30"
           maxlength="30"
+          data-rule-required="true"
+          data-msg-required="Address is required"
         />
         <label class="formlabel" for="City">City:</label>
-        <input type="text" id="City" name="City" size="30" maxlength="30" />
+        <input
+          type="text"
+          id="City"
+          name="City"
+          size="30"
+          maxlength="30"
+          data-rule-required="true"
+          data-msg-required="City is required"
+        />
         <label class="formlabel" for="State">State:</label>
-        <select>
+        <select
+          name="State"
+          id="State"
+          data-rule-required="true"
+          data-msg-required="State is required"
+        >
+          <option value="">Select...</option>
           <option value="AL">Alabama</option>
           <option value="AK">Alaska</option>
           <option value="AZ">Arizona</option>
@@ -181,15 +241,33 @@
           <option value="WY">Wyoming</option>
         </select>
         <label class="formlabel" for="Zip">Zip:</label>
-        <input type="text" id="Zip" name="Zip" size="5" maxlength="5" />
+        <input
+          type="text"
+          id="Zip"
+          name="Zip"
+          size="5"
+          maxlength="5"
+          data-rule-required="true"
+          data-msg-required="Zip is required"
+          data-rule-minlength="5"
+          data-msg-minlength="Zip must be 5 digits"
+        />
         <hr />
         <label class="formlabel">Taking Medications:</label>
         <label for="Yes"
-          ><input type="radio" name="Yes" id="Y" value="Y" />Yes</label
+          ><input
+            type="radio"
+            name="YNchoice"
+            id="Yes"
+            value="Y"
+            data-rule-required="true"
+            data-msg-required="Required"
+          />Yes</label
         >
         <label for="No"
-          ><input type="radio" name="No" id="N" value="N" />No</label
+          ><input type="radio" name="YNchoice" id="No" value="N" />No</label
         >
+        <label for="YNchoice" class="error"></label>
         <label class="formlabel" for="MedicationsList"
           >If yes, list medications here:</label
         >
