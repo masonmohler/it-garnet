@@ -10,8 +10,9 @@ html {
 }
 
 body {
-  font-family: "Lato", sans-serif;
-  background: #c0c0c0;
+  font-family: "Kanit", sans-serif;
+  background: #071310;
+  color: #e4f3ef;
   padding: 20px;
 }
 
@@ -22,12 +23,13 @@ input {
 
 header h1 {
   text-align: center;
+  font-size: 4rem;
 }
 
 section[id] {
-  border: 6px solid rgba(0, 0, 0, 0.4);
-  background: #fff;
-  border-radius: 12px;
+  border: 5px solid rgb(36, 135, 110, 0.8);
+  background: rgb(146, 220, 201, 0.4);
+  border-radius: 1rem;
   margin: 40px auto;
   padding: 20px;
   display: flex;
@@ -35,7 +37,8 @@ section[id] {
 }
 
 h2.section-heading {
-  border-bottom: 2px solid #c0c0c0;
+  border-bottom: 2px solid #e4f3ef;
+  font-size: 3rem;
 }
 
 .section-heading {
@@ -59,10 +62,16 @@ h2.section-heading + h3.section-heading {
 }
 .markup {
   flex: 1 70%;
-  background-color: lightgrey;
+  background-color: rgb(7, 19, 16, 0.5);
   padding: 10px;
   margin-bottom: 40px;
   overflow: auto;
+  border: 5px solid rgb(36, 135, 110, 0.8);
+  border-radius: 1rem;
+}
+
+footer {
+  text-align: center;
 }
 
 /**
@@ -127,7 +136,7 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-  background: #f5f2f0;
+  background: #e4f3ef;
 }
 
 /* Inline code */
@@ -178,7 +187,7 @@ pre[class*="language-"] {
 .style .token.string {
   color: #9a6e3a;
   /* This background color was intended by the author of this theme. */
-  background: hsla(0, 0%, 100%, 0.5);
+  background: #071310;
 }
 
 .token.atrule,
