@@ -31,49 +31,39 @@
         margin-right: auto;
         margin-left: auto;
         text-shadow: 2px 2px #000;
-        padding: 20px;
-        position: relative;
+        display: grid;
+        grid-template-columns: repeat(5, 150px);
+        grid-template-rows: repeat(5, 150px);
       }
       #navy {
         background-color: #001f3f;
         width: 150px;
         height: 150px;
-        position: absolute;
-        top: 0;
-        left: 0;
+        grid-area: 1 / 1;
       }
       #teal {
         background-color: #39cccc;
         width: 150px;
         height: 150px;
-        position: absolute;
-        top: 0;
-        right: 0;
+        grid-area: 1 / 5;
       }
       #blue {
         background-color: #0074d9;
         width: 150px;
         height: 150px;
-        position: absolute;
-        bottom: 0;
-        left: 0;
+        grid-area: 5 / 1;
       }
       #aqua {
         background-color: #7fdbff;
         width: 150px;
         height: 150px;
-        position: absolute;
-        bottom: 0;
-        right: 0;
+        grid-area: 5 / 5;
       }
       #footer {
         background-color: #666;
         width: 150px;
         height: 150px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        grid-area: 3 / 3;
       }
       h1 {
         color: #000;
