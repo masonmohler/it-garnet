@@ -33,3 +33,15 @@ header {
 h1.title {
   text-align: center;
 }
+
+#expand {
+  cursor: pointer;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+#labsList {
+  display: none;
+  margin-top: 0;
+  padding-top: 0;
+}
