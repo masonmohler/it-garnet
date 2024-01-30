@@ -22,12 +22,33 @@ html {
 body {
   font-family: "DM Sans", sans-serif;
   margin: 0;
+  background-color: #052123;
+  color: #daf8f9;
+}
+
+a {
+  color: #84e4ec;
+  transition: 0.4s;
+}
+
+a:hover {
+  font-size: 1.4rem;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
 }
 
 header {
-  border: 5px solid;
+  border-bottom: 5px solid;
   font-weight: 600;
   font-size: 36px;
+  line-height: 4rem;
+}
+
+main {
+  line-height: 1.5rem;
 }
 
 h1.title {
@@ -36,12 +57,9 @@ h1.title {
 
 #expand {
   cursor: pointer;
-  margin-bottom: 0;
-  padding-bottom: 0;
+  margin-bottom: 1rem;
 }
 
 #labsList {
   display: none;
-  margin-top: 0;
-  padding-top: 0;
 }
