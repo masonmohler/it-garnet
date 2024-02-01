@@ -12,7 +12,7 @@ html {
 /*  --------------- Utility Classes -----------------  */
 
 .container {
-  width: 50vw;
+  width: 80vw;
   max-width: 960px;
   margin: 40px auto;
 }
