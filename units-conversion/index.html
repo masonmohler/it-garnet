@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Mason Mohler" />
+    <title>Unit Converter (AJAX)</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body class="container">
+    <form id="CalculatorForm" onsubmit="return false">
+      <h1>Unit Converter (AJAX)</h1>
+      <fieldset>
+        <legend>Unit Converter (AJAX)</legend>
+        <label for="FromValue">From Value: </label>
+        <input
+          type="text"
+          id="FromValue"
+          name="FromValue"
+          data-rule-required="true"
+          data-msg-required="Value is Required"
+          data-rule-number="true"
+          data-msg-number="Value must be a number"
+        />
+        <label for="FromValue" class="error"></label><br />
+        <label for="FromUnit">From Unit: </label>
+        <label for="cm"
+          ><input
+            type="radio"
+            id="cm"
+            name="FromUnit"
+            value="cm"
+            data-rule-required="true"
+            data-msg-required="From Unit is Required"
+          />Centimeters</label
+        >
+        <label for="m"
+          ><input
+            type="radio"
+            id="m"
+            name="FromUnit"
+            value="m"
+            data-rule-required="true"
+            data-msg-required="From Unit is Required"
+          />Meters</label
+        >
+        <label for="km"
+          ><input
+            type="radio"
+            id="km"
+            name="FromUnit"
+            value="km"
+            data-rule-required="true"
+            data-msg-required="From Unit is Required"
+          />Kilometers</label
+        >
+        <label for="in"
+          ><input
+            type="radio"
+            id="in"
+            name="FromUnit"
+            value="in"
+            data-rule-required="true"
+            data-msg-required="From Unit is Required"
+          />Inches</label
+        >
+        <label for="ft"
+          ><input
+            type="radio"
+            id="ft"
+            name="FromUnit"
+            value="ft"
+            data-rule-required="true"
+            data-msg-required="From Unit is Required"
+          />Feet</label
+        >
+        <label for="y"
+          ><input
+            type="radio"
+            id="y"
+            name="FromUnit"
+            value="y"
+            data-rule-required="true"
+            data-msg-required="From Unit is Required"
+          />Yards</label
+        >
+        <label for="mi"
+          ><input
+            type="radio"
+            id="mi"
+            name="FromUnit"
+            value="mi"
+            data-rule-required="true"
+            data-msg-required="From Unit is Required"
+          />Miles</label
+        >
+        <label for="FromUnit" class="error"></label><br />
+        <label for="op1">Operand 2: </label>
+        <input
+          type="text"
+          id="op2"
+          name="op2"
+          size="15"
+          maxlength="15"
+          data-rule-required="true"
+          data-msg-required="Operand 2 is Required"
+          data-rule-number="true"
+          data-msg-number="Operand 2 must be a number"
+        />
+        <label for="op2" class="error"></label><br />
+        <div class="result">
+          <p>Result: <span id="result"></span></p>
+        </div>
+        <input
+          type="submit"
+          value="Calculate"
+          name="Calculate"
+          onclick="doCalculation()"
+        />
+        <input type="submit" value="Clear" name="Clear" onclick="clearForm()" />
+      </fieldset>
+      <br />
+    </form>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

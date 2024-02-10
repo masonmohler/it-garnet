@@ -1,0 +1,40 @@
+/*  --------------- Box Sizing -----------------  */
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*  --------------- Utility Classes -----------------  */
+
+.container {
+  width: 80vw;
+  max-width: 960px;
+  margin: 40px auto;
+}
+
+.error {
+  color: red;
+  padding-left: 5px;
+}
+
+/*  --------------- Global Styles -----------------  */
+
+h1 {
+  border-bottom: 5px solid #cb9803;
+  color: #926906;
+  font-size: 2.5rem;
+}
+
+fieldset {
+  padding: 2rem;
+  margin: auto;
+}
+
+input {
+  margin-bottom: 1rem;
+}
