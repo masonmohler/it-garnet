@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body class="container">
-    <form id="CalculatorForm" onsubmit="return false">
+    <form id="UnitConversionForm" onsubmit="return false">
       <h1>Unit Converter (AJAX)</h1>
       <fieldset>
         <legend>Unit Converter (AJAX)</legend>
@@ -27,70 +27,70 @@
         />
         <label for="FromValue" class="error"></label><br />
         <label for="FromUnit">From Unit: </label>
-        <label for="cm"
+        <label for="fromCM"
           ><input
             type="radio"
-            id="cm"
+            id="fromCM"
             name="FromUnit"
             value="cm"
             data-rule-required="true"
             data-msg-required="From Unit is Required"
           />Centimeters</label
         >
-        <label for="m"
+        <label for="fromM"
           ><input
             type="radio"
-            id="m"
+            id="fromM"
             name="FromUnit"
             value="m"
             data-rule-required="true"
             data-msg-required="From Unit is Required"
           />Meters</label
         >
-        <label for="km"
+        <label for="fromKM"
           ><input
             type="radio"
-            id="km"
+            id="fromKM"
             name="FromUnit"
             value="km"
             data-rule-required="true"
             data-msg-required="From Unit is Required"
           />Kilometers</label
         >
-        <label for="in"
+        <label for="fromIN"
           ><input
             type="radio"
-            id="in"
+            id="fromIN"
             name="FromUnit"
             value="in"
             data-rule-required="true"
             data-msg-required="From Unit is Required"
           />Inches</label
         >
-        <label for="ft"
+        <label for="fromFT"
           ><input
             type="radio"
-            id="ft"
+            id="fromFT"
             name="FromUnit"
             value="ft"
             data-rule-required="true"
             data-msg-required="From Unit is Required"
           />Feet</label
         >
-        <label for="y"
+        <label for="fromYD"
           ><input
             type="radio"
-            id="y"
+            id="fromYD"
             name="FromUnit"
-            value="y"
+            value="yd"
             data-rule-required="true"
             data-msg-required="From Unit is Required"
           />Yards</label
         >
-        <label for="mi"
+        <label for="fromMI"
           ><input
             type="radio"
-            id="mi"
+            id="fromMI"
             name="FromUnit"
             value="mi"
             data-rule-required="true"
@@ -98,27 +98,84 @@
           />Miles</label
         >
         <label for="FromUnit" class="error"></label><br />
-        <label for="op1">Operand 2: </label>
-        <input
-          type="text"
-          id="op2"
-          name="op2"
-          size="15"
-          maxlength="15"
-          data-rule-required="true"
-          data-msg-required="Operand 2 is Required"
-          data-rule-number="true"
-          data-msg-number="Operand 2 must be a number"
-        />
-        <label for="op2" class="error"></label><br />
-        <div class="result">
-          <p>Result: <span id="result"></span></p>
-        </div>
+        <label for="ToUnit">To Unit: </label>
+        <label for="toCM"
+          ><input
+            type="radio"
+            id="toCM"
+            name="ToUnit"
+            value="cm"
+            data-rule-required="true"
+            data-msg-required="To Unit is Required"
+          />Centimeters</label
+        >
+        <label for="toM"
+          ><input
+            type="radio"
+            id="toM"
+            name="ToUnit"
+            value="m"
+            data-rule-required="true"
+            data-msg-required="To Unit is Required"
+          />Meters</label
+        >
+        <label for="toKM"
+          ><input
+            type="radio"
+            id="toKM"
+            name="ToUnit"
+            value="km"
+            data-rule-required="true"
+            data-msg-required="To Unit is Required"
+          />Kilometers</label
+        >
+        <label for="toIN"
+          ><input
+            type="radio"
+            id="toIN"
+            name="ToUnit"
+            value="in"
+            data-rule-required="true"
+            data-msg-required="To Unit is Required"
+          />Inches</label
+        >
+        <label for="toFT"
+          ><input
+            type="radio"
+            id="toFT"
+            name="ToUnit"
+            value="ft"
+            data-rule-required="true"
+            data-msg-required="To Unit is Required"
+          />Feet</label
+        >
+        <label for="toYD"
+          ><input
+            type="radio"
+            id="toYD"
+            name="ToUnit"
+            value="yd"
+            data-rule-required="true"
+            data-msg-required="To Unit is Required"
+          />Yards</label
+        >
+        <label for="toMI"
+          ><input
+            type="radio"
+            id="toMI"
+            name="ToUnit"
+            value="mi"
+            data-rule-required="true"
+            data-msg-required="To Unit is Required"
+          />Miles</label
+        >
+        <label for="ToUnit" class="error"></label>
+        <p>To Value: <span id="ToValue"></span></p>
         <input
           type="submit"
-          value="Calculate"
-          name="Calculate"
-          onclick="doCalculation()"
+          value="Convert"
+          name="Convert"
+          onclick="doConversion()"
         />
         <input type="submit" value="Clear" name="Clear" onclick="clearForm()" />
       </fieldset>
