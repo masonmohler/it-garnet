@@ -1,11 +1,12 @@
 .formcontainer {
   width: 1000px;
   padding: 5px;
+  margin: auto;
 }
 
 .formlabel {
   display: inline-block;
-  width: 100px;
+  width: 10vw;
   text-align: right;
   padding: 5px;
 }

@@ -12,19 +12,43 @@
   <body>
     <form id="myform">
       <div class="formcontainer">
-        <h2>Stock Ticker Details</h2>
-        <label for="StockSymbol" class="formlabel">Enter Symbol: </label>
-        <!--<label for="DisplayStock" class="formlabel" ></label>-->
+        <h2>Currency Value History</h2>
+        <label for="baseCurrency" class="formlabel">Base Currency: </label>
         <input
-          type="text"
-          id="StockSymbol"
-          name="StockSymbol"
-          size="6"
-          maxlength="6"
+          list="baseCurrencyList"
+          placeholder="Select a Currency..."
+          id="baseCurrency"
+          name="baseCurrency"
           data-rule-required="true"
-          data-msg-required="Value is Required"
+          data-msg-required="Base currency is Required"
         />
-        <label class="error" for="StockSymbol" id="StockSymbolError"></label
+        <datalist id="baseCurrencyList">
+          <option value="USD">United States Dollar</option>
+          <option value="MXN">Mexican Pesos</option>
+          <option value="AUD">Australian Dollar</option>
+          <option value="JPY">Japanese Yen</option>
+          <option value="KRW">Korean Won</option>
+        </datalist>
+
+        <label class="error" for="baseCurrency" id="baseCurrencyError"></label
+        ><br />
+        <label for="toCurrency" class="formlabel">Convert to Currency: </label>
+        <input
+          list="toCurrencyList"
+          placeholder="Select a Currency..."
+          id="toCurrency"
+          name="toCurrency"
+          data-rule-required="true"
+          data-msg-required="To currency is Required"
+        />
+        <datalist id="toCurrencyList">
+          <option value="USD">United States Dollar</option>
+          <option value="MXN">Mexican Pesos</option>
+          <option value="AUD">Australian Dollar</option>
+          <option value="JPY">Japanese Yen</option>
+          <option value="KRW">Korean Won</option>
+        </datalist>
+        <label class="error" for="toCurrency" id="toCurrencyError"></label
         ><br />
         <label class="formlabel">From Date:</label>
         <input
@@ -35,6 +59,7 @@
           data-msg-required="From Date is Required"
         />
         <label id="FromDateError" for="FromDate" class="error"></label>
+        <br />
         <label class="formlabel">To Date:</label>
         <input
           type="date"
@@ -47,32 +72,20 @@
         <br /><br />
         <input
           type="button"
-          value="DisplayStock"
-          id="DisplayStock"
-          name="DisplayStock"
-          onclick="GetStock();"
+          value="Show Results"
+          id="getResults"
+          name="getResults"
+          onclick="getResults()"
         />
         <input
           type="button"
           value="Clear"
-          id="Clear"
-          name="Clear"
-          onclick="ClearForm();"
+          id="clear"
+          name="clear"
+          onclick="clearForm()"
         />
         <hr />
         <br />
-        <label for="company" class="formlabel">Company: </label>
-        <span id="company"></span><br />
-        <label for="address" class="formlabel">Address: </label>
-        <span id="address"></span><br />
-        <label for="employees" class="formlabel">Employees: </label>
-        <span id="employees"></span><br />
-        <label for="description" class="formlabel">Description: </label>
-        <span id="description"></span><br />
-        <label for="url" class="formlabel">URL: </label>
-        <a id="url"></a><br />
-        <hr />
-
         <div class="clearfix">
           <div class="img-container">
             <span id="StockValueTable"></span>
