@@ -1,0 +1,120 @@
+/*  --------------- Box Sizing -----------------  */
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*  --------------- Utility Classes -----------------  */
+
+.container {
+  width: 80vw;
+  margin: auto;
+}
+
+/*  --------------- GLobal Styles -----------------  */
+
+body {
+  margin: 0;
+  color: #443f05;
+  background-color: #5b94de;
+  background-image: url(../img/devilsden1.jpg);
+  font-size: 1.2rem;
+  font-family: "Nunito Sans", sans-serif;
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  background-color: rgb(255, 255, 255, 0.85);
+  border-radius: 1rem;
+  width: 60vw;
+  margin: auto;
+}
+
+.content {
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  margin-bottom: 1rem;
+  background-color: rgb(255, 255, 255, 0.8);
+  border-radius: 0 0 1rem 1rem;
+}
+
+h1 {
+  align-self: center;
+  font-size: 3.7rem;
+  text-align: center;
+  margin: 0;
+  text-transform: uppercase;
+  padding: 1rem;
+}
+
+#logo {
+  height: 6rem;
+  margin: 1rem 0 1rem 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+}
+
+nav a {
+  text-decoration: none;
+  color: #443f05;
+  align-self: center;
+  font-size: 1.8rem;
+  transition: 0.4s;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+nav a:hover {
+  background-color: #443f05;
+  color: #fff;
+}
+
+p {
+  line-height: 2rem;
+  font-size: 1.2rem;
+}
+
+h4 {
+  margin-bottom: 0rem;
+  margin-top: 2rem;
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+.image-item {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+}
