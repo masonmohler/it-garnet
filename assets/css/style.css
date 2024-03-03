@@ -48,7 +48,7 @@ header {
 }
 
 main {
-  line-height: 1.5rem;
+  line-height: 1.7rem;
 }
 
 h1.title {
@@ -62,4 +62,9 @@ h1.title {
 
 #labsList {
   display: none;
+}
+
+article {
+  margin-top: 2rem;
+  border-top: 5px solid #daf8f9;
 }
