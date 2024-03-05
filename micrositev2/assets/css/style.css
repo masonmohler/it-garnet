@@ -30,13 +30,31 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
   background-color: rgb(255, 255, 255, 0.85);
   border-radius: 1rem;
   width: 60vw;
-  margin: auto;
+  margin: 0 auto 1rem auto;
+}
+
+footer {
+  background-color: rgb(255, 255, 255, 0.85);
+  border-radius: 1rem 1rem 0 0;
+  width: 80vw;
+  height: 8vh;
+  margin: 0;
+  text-align: center;
+  display: block;
+  margin-top: auto;
+}
+
+footer a {
+  color: #443f05;
 }
 
 .content {
@@ -64,6 +82,16 @@ h1 {
 #logo {
   height: 6rem;
   margin: 1rem 0 1rem 1rem;
+}
+
+#myVideo {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
 nav {
