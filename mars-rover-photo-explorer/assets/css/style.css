@@ -1,0 +1,37 @@
+/*  --------------- Box Sizing -----------------  */
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*  --------------- Utility Classes -----------------  */
+
+.container {
+  width: 80vw;
+  max-width: 960px;
+  margin: 40px auto;
+}
+
+.error {
+  color: red;
+  padding-left: 5px;
+}
+
+table,
+td,
+th {
+  border: 1px solid;
+}
+
+table td, th {
+  padding: .5rem;
+}
+
+body {
+    line-height: 2rem;
+}

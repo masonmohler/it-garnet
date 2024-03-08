@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Mars Rover Photo Explorer" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, AJAX, jQuery" />
+    <meta name="author" content="Mason Mohler" />
+    <title>Mars Rover Photo Explorer</title>
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script>
+  </head>
+  <body class="container">
+    <h1>Mars Rover Photo Explorer</h1>
+    <table>
+      <tr>
+        <th>Rover</th>
+        <th>Mission Start</th>
+        <th>Mission End</th>
+      </tr>
+      <tr>
+        <td>Curiosity</td>
+        <td>08/06/2012</td>
+        <td>09/28/2019</td>
+      </tr>
+      <tr>
+        <td>Opportunity</td>
+        <td>01/26/2004</td>
+        <td>06/11/2018</td>
+      </tr>
+      <tr>
+        <td>Spirit</td>
+        <td>01/05/2004</td>
+        <td>03/21/2004</td>
+      </tr>
+    </table>
+    <form id="roverForm" onsubmit="return false">
+      <h2>Select a rover and picture date:</h2>
+      <label for="rovers">Operators: </label>
+      <label for="Curiosity"
+        ><input
+          type="radio"
+          id="Curiosity"
+          name="rovers"
+          value="Curiosity"
+          onchange="setDate()"
+          data-rule-required="true"
+          data-msg-required="Rover is Required"
+        />Curiosity</label
+      >
+      <label for="Opportunity"
+        ><input
+          type="radio"
+          id="Opportunity"
+          name="rovers"
+          value="Opportunity"
+          onchange="setDate()"
+          data-rule-required="true"
+          data-msg-required="Rover is Required"
+        />Opportunity</label
+      >
+      <label for="Spirit"
+        ><input
+          type="radio"
+          id="Spirit"
+          name="rovers"
+          value="Spirit"
+          onchange="setDate()"
+          data-rule-required="true"
+          data-msg-required="Rover is Required"
+        />Spirit</label
+      >
+      <label for="rovers" class="error"></label><br />
+      <label for="picdate">Picture Date:</label>
+      <input
+        type="date"
+        name="picdate"
+        id="picdate"
+        data-rule-required="true"
+        data-msg-required=" Picture Date is Required"
+      />
+      <label for="picdate" class="error"></label>
+      <br />
+      <input
+        type="submit"
+        value="Search"
+        name="Search"
+        onclick="findImages()"
+      />
+      <input
+        type="submit"
+        value="Clear"
+        name="Clear"
+        onclick="clearForm()"
+        novalidate
+      />
+    </form>
+    <hr />
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
