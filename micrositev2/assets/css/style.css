@@ -36,14 +36,14 @@ body {
 }
 
 main {
-  background-color: rgb(255, 255, 255, 0.85);
+  background-color: rgb(255, 255, 255, 0.9);
   border-radius: 1rem;
   width: 60vw;
   margin: 0 auto 1rem auto;
 }
 
 footer {
-  background-color: rgb(255, 255, 255, 0.85);
+  background-color: rgb(255, 255, 255, 0.9);
   border-radius: 1rem 1rem 0 0;
   width: 80vw;
   height: 8vh;
@@ -66,7 +66,7 @@ header {
   display: grid;
   grid-template-columns: 1fr 8fr;
   margin-bottom: 1rem;
-  background-color: rgb(255, 255, 255, 0.8);
+  background-color: rgb(255, 255, 255, 0.9);
   border-radius: 0 0 1rem 1rem;
 }
 
@@ -79,13 +79,14 @@ header {
   padding: 1rem;
 }
 
-h1 {
+h1:not(.main-title) {
   align-self: center;
-  font-size: 2.7rem;
+  font-size: 3rem;
   text-align: center;
   margin: 0;
   text-transform: uppercase;
   padding: 1rem;
+  border-bottom: 5px solid #443f05;
 }
 
 #logo {
@@ -149,8 +150,27 @@ h4 {
 
 .image-item img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
+}
+
+#wufoo-mau6gt91d29rgj {
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+#faq {
+  margin: 1rem;
+  line-height: 2rem;
+}
+
+#faq summary {
+  font-size: 1.4rem;
+  transition: 0.4s;
+}
+
+#faq summary:hover {
+  cursor: pointer;
 }
 
 @media screen and (max-width: 860px) {
