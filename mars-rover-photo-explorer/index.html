@@ -13,91 +13,126 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script>
   </head>
   <body class="container">
-    <h1>Mars Rover Photo Explorer</h1>
-    <table>
-      <tr>
-        <th>Rover</th>
-        <th>Mission Start</th>
-        <th>Mission End</th>
-      </tr>
-      <tr>
-        <td>Curiosity</td>
-        <td>08/06/2012</td>
-        <td>09/28/2019</td>
-      </tr>
-      <tr>
-        <td>Opportunity</td>
-        <td>01/26/2004</td>
-        <td>06/11/2018</td>
-      </tr>
-      <tr>
-        <td>Spirit</td>
-        <td>01/05/2004</td>
-        <td>03/21/2004</td>
-      </tr>
-    </table>
-    <form id="roverForm" onsubmit="return false">
-      <h2>Select a rover and picture date:</h2>
-      <label for="rovers">Operators: </label>
-      <label for="Curiosity"
-        ><input
-          type="radio"
-          id="Curiosity"
-          name="rovers"
-          value="Curiosity"
-          onchange="setDate()"
-          data-rule-required="true"
-          data-msg-required="Rover is Required"
-        />Curiosity</label
-      >
-      <label for="Opportunity"
-        ><input
-          type="radio"
-          id="Opportunity"
-          name="rovers"
-          value="Opportunity"
-          onchange="setDate()"
-          data-rule-required="true"
-          data-msg-required="Rover is Required"
-        />Opportunity</label
-      >
-      <label for="Spirit"
-        ><input
-          type="radio"
-          id="Spirit"
-          name="rovers"
-          value="Spirit"
-          onchange="setDate()"
-          data-rule-required="true"
-          data-msg-required="Rover is Required"
-        />Spirit</label
-      >
-      <label for="rovers" class="error"></label><br />
-      <label for="picdate">Picture Date:</label>
-      <input
-        type="date"
-        name="picdate"
-        id="picdate"
-        data-rule-required="true"
-        data-msg-required=" Picture Date is Required"
-      />
-      <label for="picdate" class="error"></label>
-      <br />
-      <input
-        type="submit"
-        value="Search"
-        name="Search"
-        onclick="findImages()"
-      />
-      <input
-        type="submit"
-        value="Clear"
-        name="Clear"
-        onclick="clearForm()"
-        novalidate
-      />
-    </form>
+    <main>
+      <div class="info">
+        <h1>Mars Rover Photo Explorer</h1>
+        <table>
+          <tr>
+            <th>Rover</th>
+            <th>Mission Start</th>
+            <th>Mission End</th>
+          </tr>
+          <tr>
+            <td>Curiosity</td>
+            <td>08/06/2012</td>
+            <td>09/28/2019</td>
+          </tr>
+          <tr>
+            <td>Opportunity</td>
+            <td>01/26/2004</td>
+            <td>06/11/2018</td>
+          </tr>
+          <tr>
+            <td>Spirit</td>
+            <td>01/05/2004</td>
+            <td>03/21/2004</td>
+          </tr>
+        </table>
+      </div>
+      <div class="searchForm">
+        <form id="roverForm" onsubmit="return false">
+          <h2>Select a rover and picture date:</h2>
+          <label for="rovers">Rovers: </label>
+          <label for="Curiosity"
+            ><input
+              type="radio"
+              id="Curiosity"
+              name="rovers"
+              value="curiosity"
+              onchange="setDate()"
+              data-rule-required="true"
+              data-msg-required="Rover is Required"
+            />Curiosity</label
+          >
+          <label for="Opportunity"
+            ><input
+              type="radio"
+              id="Opportunity"
+              name="rovers"
+              value="opportunity"
+              onchange="setDate()"
+              data-rule-required="true"
+              data-msg-required="Rover is Required"
+            />Opportunity</label
+          >
+          <label for="Spirit"
+            ><input
+              type="radio"
+              id="Spirit"
+              name="rovers"
+              value="spirit"
+              onchange="setDate()"
+              data-rule-required="true"
+              data-msg-required="Rover is Required"
+            />Spirit</label
+          >
+          <label for="rovers" class="error"></label><br />
+          <label for="picdate">Picture Date:</label>
+          <input
+            type="date"
+            name="picdate"
+            id="picdate"
+            data-rule-required="true"
+            data-msg-required=" Picture Date is Required"
+          />
+          <label for="picdate" class="error"></label>
+          <br />
+          <input
+            type="submit"
+            value="Search"
+            name="Search"
+            onclick="findImages()"
+          />
+          <input
+            type="submit"
+            value="Clear"
+            name="Clear"
+            novalidate
+            onclick="clearForm()"
+          />
+        </form>
+      </div>
+    </main>
     <hr />
+    <p id="numResults"></p>
+    <div class="gallery">
+      <a id="a0" href=""><img id="img0" src="" onclick="showFull()" /></a>
+      <a id="a1" href=""><img id="img1" src="" onclick="showFull()" /></a>
+      <a id="a2" href=""><img id="img2" src="" onclick="showFull()" /></a>
+      <a id="a3" href=""><img id="img3" src="" onclick="showFull()" /></a>
+      <a id="a4" href=""><img id="img4" src="" onclick="showFull()" /></a>
+      <a id="a5" href=""><img id="img5" src="" onclick="showFull()" /></a>
+      <a id="a6" href=""><img id="img6" src="" onclick="showFull()" /></a>
+      <a id="a7" href=""><img id="img7" src="" onclick="showFull()" /></a>
+      <a id="a8" href=""><img id="img8" src="" onclick="showFull()" /></a>
+      <a id="a9" href=""><img id="img9" src="" onclick="showFull()" /></a>
+      <a id="a10" href=""><img id="img10" src="" onclick="showFull()" /></a>
+      <a id="a11" href=""><img id="img11" src="" onclick="showFull()" /></a>
+      <a id="a12" href=""><img id="img12" src="" onclick="showFull()" /></a>
+      <a id="a13" href=""><img id="img13" src="" onclick="showFull()" /></a>
+      <a id="a14" href=""><img id="img14" src="" onclick="showFull()" /></a>
+      <a id="a15" href=""><img id="img15" src="" onclick="showFull()" /></a>
+      <a id="a16" href=""><img id="img16" src="" onclick="showFull()" /></a>
+      <a id="a17" href=""><img id="img17" src="" onclick="showFull()" /></a>
+      <a id="a18" href=""><img id="img18" src="" onclick="showFull()" /></a>
+      <a id="a19" href=""><img id="img19" src="" onclick="showFull()" /></a>
+      <a id="a20" href=""><img id="img20" src="" onclick="showFull()" /></a>
+      <a id="a21" href=""><img id="img21" src="" onclick="showFull()" /></a>
+      <a id="a22" href=""><img id="img22" src="" onclick="showFull()" /></a>
+      <a id="a23" href=""><img id="img23" src="" onclick="showFull()" /></a>
+      <a id="a24" href=""><img id="img24" src="" onclick="showFull()" /></a>
+      <a id="a25" href=""><img id="img25" src="" onclick="showFull()" /></a>
+    </div>
     <script src="assets/js/script.js"></script>
   </body>
 </html>
