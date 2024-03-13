@@ -56,11 +56,15 @@ function clearForm() {
   document.getElementById("Opportunity").checked = false;
   document.getElementById("Spirit").checked = false;
   document.getElementById("picdate").value = "";
+  document.getElementById("picdate").min = "";
+  document.getElementById("picdate").max = "";
   document.getElementById("numResults").innerHTML = "";
+  document.getElementById("error").innerHTML = "";
 
   for (i = 0; i < 25; i++) {
     document.getElementById("img" + i).src = "";
     document.getElementById("img" + i).title = "";
+    document.getElementById("a" + i).href = "";
   }
 }
 
