@@ -39,15 +39,21 @@ async function findImages() {
     let msgJSONText = await msg.text();
     // Parse the JSON string into an object
     let msg1 = JSON.parse(msgJSONText);
-    for (i = 0; i < 25; i++) {
-      document.getElementById("img" + i).src = msg1.photos[i].img_src;
-      document.getElementById("img" + i).title =
-        msg1.photos[i].camera.full_name;
-      document.getElementById("a" + i).href = msg1.photos[i].img_src;
+    if (msg1.photos.length) {
+      for (i = 0; i < 25; i++) {
+        document.getElementById("img" + i).src = msg1.photos[i].img_src;
+        document.getElementById("img" + i).title =
+          msg1.photos[i].camera.full_name;
+        document.getElementById("a" + i).href = msg1.photos[i].img_src;
+      }
     }
 
-    document.getElementById("numResults").innerHTML =
-      "There were " + msg1.photos.length + " results.";
+    if (msg1.photos.length === 0) {
+      document.getElementById("numResults").innerHTML = "No results.";
+    } else {
+      document.getElementById("numResults").innerHTML =
+        "There were " + msg1.photos.length + " results.";
+    }
   }
 }
 
