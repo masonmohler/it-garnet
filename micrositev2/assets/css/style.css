@@ -16,6 +16,15 @@ html {
   margin: auto;
 }
 
+img.right {
+  width: 500px;
+  height: auto;
+  margin: 2rem 1rem;
+  border: 5px solid;
+  border-radius: 1rem;
+  float: right;
+}
+
 /*  --------------- GLobal Styles -----------------  */
 
 body {
