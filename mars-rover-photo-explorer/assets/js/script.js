@@ -40,7 +40,7 @@ async function findImages() {
     // Parse the JSON string into an object
     let msg1 = JSON.parse(msgJSONText);
     if (msg1.photos.length) {
-      for (i = 0; i < 25; i++) {
+      for (i = 0; i < msg1.photos.length; i++) {
         document.getElementById("img" + i).src = msg1.photos[i].img_src;
         document.getElementById("img" + i).title =
           msg1.photos[i].camera.full_name;
