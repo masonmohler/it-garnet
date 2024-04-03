@@ -1,0 +1,27 @@
+.formcontainer {
+  padding: 5px;
+  margin: auto;
+}
+
+.container {
+  width: 80vw;
+  max-width: 960px;
+  margin: 40px auto;
+}
+
+.error {
+  color: red;
+  padding-left: 5px;
+}
+
+.img-container {
+  margin: auto;
+  width: 40%;
+  padding: 20px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
